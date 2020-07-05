@@ -19,7 +19,7 @@ For embeds, you'd have to send the JSON representation of the embed.
 1. You can use [this tool](https://leovoel.github.io/embed-visualizer/) to generate JSON representations.
 2. Copy the JSON from the left and paste it into [hastebin](https://hasteb.in/). Save it (`Ctrl` + `S` or the save button on the right)
 3. Copy the URL and paste it into Discord
-4. Your final command would then be `welcomer #general https://hasteb.in/theurl`.
+4. Your final command would then be `leaveur #general https://hasteb.in/theurl`.
 
 ##### If you want to use your own text saver thing instead of hastebin, send the raw URL.
 For example: https://hasteb.in/raw/about.md
