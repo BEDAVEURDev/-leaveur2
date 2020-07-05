@@ -1,5 +1,5 @@
 # Installation
-Run this command in Modmail: `plugin add welcomer`
+Run this command in Modmail: `plugin add leaveur`
 
 # Permission needed to function
 `MANAGE_GUILD` (used to view invites)
