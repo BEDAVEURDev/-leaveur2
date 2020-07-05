@@ -70,7 +70,7 @@ class leaveur(commands.Cog):
     @commands.has_permissions(manage_guild=True)
     @commands.command()
     async def leaveur(self, ctx, channel: discord.TextChannel, *, message):
-        """Sets up leaveur command. Check [here](https://github.com/fourjr/modmail-plugins/blob/master/leaveur/README.md)
+        """Sets up leaveur command. Check [here](https://github.com/BEDAVEURDev/-leaveur2/blob/master/leaveur/README.md)
         for complex usage.
         """
         # Example usage: `leaveur #general Hello {member.name}`
