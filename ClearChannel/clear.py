@@ -1,6 +1,5 @@
 """
-Purger plugin for Modmail.
-
+clear plugin for Modmail.
 Written by Papiersnipper.
 All rights reserved.
 """
@@ -14,9 +13,9 @@ from core.checks import has_permissions
 from core.models import PermissionLevel
 
 
-class Purger(Cog):
+class clear(Cog):
     """Delete multiple messages at a time.
-    More info: [click here](https://github.com/papiersnipper/modmail-plugins/tree/master/purger)
+    More info: [click here](https://github.com/papiersnipper/modmail-plugins/tree/master/clear)
     """
 
     def __init__(self, bot: Bot) -> None:
@@ -24,21 +23,21 @@ class Purger(Cog):
 
     @command()
     @has_permissions(PermissionLevel.MODERATOR)
-    async def purge(self, ctx: Context, amount: int) -> None:
+    async def clear(self, ctx: Context, amount: int) -> None:
         """Delete the specified amount of messages."""
         if amount < 1:
             return
 
         try:
-            deleted = await ctx.channel.purge(limit=amount + 1)
+            deleted = await ctx.channel.clear(limit=amount + 1)
         except Forbidden:
             return await ctx.send("I don't have permission to delete messages here.")
 
-        delete_message: Message = await ctx.send(f"Successfully deleted {len(deleted)} messages!")
+        delete_message: Message = await ctx.send(f"Bien jouer {len(deleted)} messages supprimer!")
         await asyncio.sleep(3)
         await delete_message.delete()
 
 
 def setup(bot: Bot) -> None:
     """Bot cog load."""
-    bot.add_cog(Purger(bot))
+    bot.add_cog(clear(bot))
