@@ -3,7 +3,7 @@ from discord.ext import commands
 from core import checks
 from core.models import PermissionLevel
 
-class moderation(commands.Cog):
+class moderateur(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
@@ -27,8 +27,8 @@ class moderation(commands.Cog):
         if amount >= 1 and amount <= max_purge:
             await ctx.channel.purge(limit = amount + 1)
             embed = discord.Embed(
-                title = "Purge",
-                description = f"Purged {amount} message(s)!",
+                title = "Supprimer",
+                description = f"Bien jouais {amount} message(s) ont bien était supprimer!",
                 color = self.blurple
             )
             await ctx.send(embed = embed, delete_after = 5.0)
@@ -37,8 +37,8 @@ class moderation(commands.Cog):
                 return
             if modlog != None:
                 embed = discord.Embed(
-                    title = "Purge",
-                    description = f"{amount} message(s) have been purged by {ctx.author.mention} in {ctx.message.channel.mention}",
+                    title = "Supprimer",
+                    description = f"{amount} message(s) ont bien était supprimer {ctx.author.mention} dans {ctx.message.channel.mention}",
                     color = self.blurple
                 )
                 await modlog.send(embed = embed)
@@ -481,4 +481,4 @@ class moderation(commands.Cog):
             await ctx.send(embed = embed)
 
 def setup(bot):
-    bot.add_cog(moderation(bot))
+    bot.add_cog(moderateur(bot))
