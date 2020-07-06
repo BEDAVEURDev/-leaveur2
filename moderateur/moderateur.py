@@ -38,7 +38,7 @@ class moderateur(commands.Cog):
             if modlog != None:
                 embed = discord.Embed(
                     title = "Supprimer",
-                    description = f"{amount} message(s) ont bien était supprimer {ctx.author.mention} dans {ctx.message.channel.mention}",
+                    description = f"{amount} message(s) ont bien était supprimer par {ctx.author.mention} dans {ctx.message.channel.mention}",
                     color = self.blurple
                 )
                 await modlog.send(embed = embed)
