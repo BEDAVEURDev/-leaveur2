@@ -15,9 +15,9 @@ class talkwithbot(commands.Cog):
             await message.channel.send("Land")
         elif "racing" in message.content.lower():
             await message.channel.send("Suce ma bite")
-        elif "BEDAVEUR" in message.content.lower():
+        elif "beda" in message.content.lower():
             await message.channel.send("Le meilleur")
-        elif "Pauline" in message.content.lower():
+        elif "paupau" in message.content.lower():
             await message.channel.send("Trampauline")
         elif "good night" in message.content.lower():
             await message.channel.send("Good Night !")
