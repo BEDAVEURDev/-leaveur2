@@ -96,7 +96,7 @@ class leaveur(commands.Cog):
             await ctx.send('Invalid leaveur message syntax.')
 
     @commands.Cog.listener()
-    async def on_member_leave(self, member):
+    async def on_member_remove(self, member):
         invite = await self.get_used_invite(member.guild)
         config = (await self.db.find_one({'_id': 'config'}))['leaveur']
         if config:
